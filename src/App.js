@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Weather from "./Weather";
+
 
 function App() {
+  let weatherData = {
+    humidity: "",
+    wind: "",
+    description: "",
+    icon: "",
+  };
+  let temp = [];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Weather App </h1>
+      <Weather weatherData={weatherData} temp={temp} />
+      <div className="gitlink">
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="gitlink"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
+          href="https://github.com/isabel98aguiar/react5"
         >
-          Learn React
+          Github repository
         </a>
-      </header>
+      </div>
     </div>
   );
 }
